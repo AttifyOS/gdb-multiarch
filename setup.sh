@@ -34,7 +34,7 @@ install() {
   echo "source $APM_PKG_INSTALL_DIR/.gdbinit-gef.py" > $APM_PKG_INSTALL_DIR/.gdbinit
 
   echo "#!/bin/sh" > $APM_PKG_BIN_DIR/gdb-multiarch
-  echo "$APM_PKG_INSTALL_DIR/bin/gdb -x $APM_PKG_INSTALL_DIR/.gdbinit \"$@\"" >> $APM_PKG_BIN_DIR/gdb-multiarch
+  echo "$APM_PKG_INSTALL_DIR/bin/gdb -x $APM_PKG_INSTALL_DIR/.gdbinit \"\$@\"" >> $APM_PKG_BIN_DIR/gdb-multiarch
   chmod +x $APM_PKG_BIN_DIR/gdb-multiarch
   
   echo "This package adds the command gdb-multiarch"
